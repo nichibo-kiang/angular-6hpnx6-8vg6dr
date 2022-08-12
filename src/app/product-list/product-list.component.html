@@ -3,12 +3,11 @@
   <h3>
     <a
       [title]="product.name + ' details'"
-      [routerLink="['/products', product.id]"
-      ]
+      [routerLink]="['/products', product.id]"
     >
       {{ product.name }} Price: ${{ product.price }}
     </a>
-    <p *ngIf="product.description">Descriptionxx: {{ product.description }}</p>
+    <p *ngIf="product.description">Description: {{ product.description }}</p>
 
     <button type="button" (click)="share()">Share</button>
 
